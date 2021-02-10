@@ -11,9 +11,26 @@ function handleRequest(request, response) {
 
 let path = request.url;
 
-//switch(path) {
-//    case '/'
-//}
+switch(path) {
+    case '/':
+        return fs.readFile(__dirname + '/index.html', function(err, data) {
+            if (err) throw err;
+            response.writeHead(200, {'Content-Type': 'text/html'});
+            response.end(data);
+    })
+    case '/make':
+        return fs.readFile(__dirname + '/index.html', function(err, data) {
+            if (err) throw err;
+            response.writeHead(200, {'Content-Type': 'text/html'});
+            response.end(data);
+    })
+    case '/view':
+        return fs.readFile(__dirname + '/index.html', function(err, data) {
+            if (err) throw err;
+            response.writeHead(200, {'Content-Type': 'text/html'});
+            response.end(data);
+    })
+}
 
 const server = http.createServer(handleRequest);
 

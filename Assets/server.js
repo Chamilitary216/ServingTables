@@ -1,7 +1,7 @@
 const http = require('http');
-const express = require("express");
-const path = require("path");
-const app = express();
+const fs = require('fs');
+//const express = require("express");
+//const app = express();
 
 const PORT = 3000;
 
@@ -11,9 +11,9 @@ function handleRequest(request, response) {
 
 let path = request.url;
 
-switch(path) {
-    case '/'
-}
+//switch(path) {
+//    case '/'
+//}
 
 const server = http.createServer(handleRequest);
 
